@@ -1,0 +1,16 @@
+<button id="fetchBtn">데이터 가져오기</button>
+<pre id="result"></pre>
+
+<script>
+  document.getElementById("fetchBtn").onclick = async () => {
+    try {
+      const res = await fetch("http://localhost:4000/api/data", {
+        credentials: "include",
+      });
+      const data = await res.json();
+      document.getElementById("result").innerText = JSON.stringify(data);
+    } catch (err) {
+      console.error("에러발생:", err);
+    }
+  };
+</script>
