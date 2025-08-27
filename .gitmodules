@@ -1,0 +1,3 @@
+[submodule "csrf-test"]
+	path = csrf-test
+	url = https://github.com/Koras02/CORS-XSS-CSRF
